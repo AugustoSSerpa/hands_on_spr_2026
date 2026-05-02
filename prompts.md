@@ -30,19 +30,18 @@ Em seguida, usando as funções auxiliares definidas no PC0 (ou recrie-as se pre
 
 ## Prompt Card 3 — Classificador 1: EfficientNetB0 (ImageNet)
 
-Prompt card 3 - Use os _embeddings_ do EfficientNetB0 pré-treinado no ImageNet e treine a cabeça classificadora, plote as curvas de treino e avalie no conjunto de teste. Salve os resultados finais.
-
----
+**Prompt card 3 - Use os _embeddings_ do EfficientNetB0 pré-treinado no ImageNet e treine a cabeça classificadora, plote as curvas de treino e avalie no conjunto de teste. Calcule as métricas AUC, Sensibilidade, Especificidade, Valor Preditivo Positivo, Valor Preditivo Negativo e Acurácica. Salve os resultados finais.
+**---
 
 ## Prompt Card 4 — Classificador 2: RAD-DINO (Radiologia)
 
-Prompt card 4 - Use os _embeddings_ do RAD-DINO e treine a cabeça classificadora, plote as curvas de treino e avalie no conjunto de teste, usando os mesmos hiperparâmetros do EfficientNet para ter uma comparação justa. Salve os resultados finais.
+Prompt card 4 - Use os _embeddings_ do RAD-DINO e treine a cabeça classificadora, plote as curvas de treino e avalie no conjunto de teste, usando os mesmos hiperparâmetros do EfficientNet para ter uma comparação justa. Calcule as métricas AUC, Sensibilidade, Especificidade, Valor Preditivo Positivo, Valor Preditivo Negativo e Acurácica. Salve os resultados finais.
 
 ---
 
 ## Prompt Card 5 — Comparação de resultados
 
-Prompt card 5 - Plotar um gráfico de barras comparando AUC, F1, Sensibilidade, Especificidade e Acurácia dos dois modelos, e imprimir uma tabela com a diferença entre eles.
+Prompt card 5 - Plotar um gráfico de barras comparando as métricas dos dois modelos, e imprimir uma tabela com a diferença entre eles.
 
 ---
 
