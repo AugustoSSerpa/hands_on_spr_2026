@@ -38,7 +38,7 @@ Os participantes nunca editam código manualmente. Para cada bloco do notebook h
 hands_on_spr_2026/
 ├── hands_on_spr_2026.ipynb   # Notebook Colab (100% prompt-driven, sem código pré-preenchido)
 ├── prompts.md                # Todos os Prompt Cards (PC0–PC6) para o instrutor
-├── images.jpg                # Exemplo de saída do experimento
+├── images.jpg                # Imagem de RX de tórax para demo de inferência
 ├── m2400651-pneumonia.jpg    # Imagem de RX de tórax para demo de inferência
 ├── README.md                 # Este arquivo
 └── .gitignore
@@ -134,7 +134,7 @@ hands_on_spr_2026/
 
 ## 👥 Autoria
 
-Desenvolvido para a **Sociedade Paulista de Radiologia — SPR 2026**  
+Desenvolvido por Augusto Sarquis Serpa para a **Jornada Paulista de Radiologia — JPR 2026**  
 Formato: Hands-on Vibe Coding com Inteligência Artificial
 
 ---
@@ -145,4 +145,7 @@ Material educacional. Livre para adaptar, remixar e compartilhar — cite a orig
 
 ---
 
-**Dúvidas?** Abra uma issue neste repositório ou fale após a sessão.
+**Dúvidas?** Pergunte durante a sessão ou mande um e-mail para augusto.esd5@gmail.com.
+
+---
+
