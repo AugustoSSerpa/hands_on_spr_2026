@@ -1,6 +1,6 @@
 # 📋 Prompt Cards — Foundation Models para Radiologia
 
-## Prompt Card 0 — Setup e Preparação (8 min)
+## Prompt Card 0 — Setup e Preparação
 
 Prompt card 0 - Você está rodando um experimento em Google Colab com GPU T4. Vamos comparar dois modelos que extraem características de raios-X de tórax: um treinado em fotos genéricas (ImageNet) e outro treinado especificamente em imagens radiológicas. Vamos usar essas características para treinar um classificador simples de pneumonia. Vamos usar o dataset PneumoniaMIST.
 
