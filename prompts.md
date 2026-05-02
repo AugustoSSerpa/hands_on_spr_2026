@@ -2,7 +2,7 @@
 
 ## Prompt Card 0 — Setup e Preparação
 
-Prompt card 0 - Você está rodando um experimento em Google Colab com GPU T4. Vamos comparar dois modelos que extraem características de raios-X de tórax: um treinado em fotos genéricas (ImageNet) e outro treinado especificamente em imagens radiológicas. Vamos usar essas características para treinar um classificador simples de pneumonia. Vamos usar o dataset PneumoniaMIST.
+Prompt card 0 - Você está rodando um experimento em Google Colab com GPU T4. Vamos comparar dois modelos que extraem características de raios-X de tórax: um treinado em fotos genéricas (ImageNet) e outro treinado especificamente em imagens radiológicas. Vamos usar essas características para treinar um classificador simples de pneumonia. Vamos usar o dataset PneumoniaMIST. Para cada instrução que eu lhe der, faça APENAS o que foi pedido e cole na célula respectiva do notebook. Não tente advinhar o que colocar nos prompts cards subsequentes, eu lhe passarei essas informações adiante.
 
 Nesta célula, faça o setup inicial:
 - Instale e importe as bibliotecas que você achar necessária
