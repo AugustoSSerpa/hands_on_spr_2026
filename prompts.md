@@ -2,16 +2,14 @@
 
 ## Prompt Card 0 — Setup e Preparação
 
-Prompt card 0 - Você está rodando um experimento em Google Colab com GPU T4. Vamos comparar dois modelos que extraem características de raios-X de tórax: um treinado em fotos genéricas (ImageNet) e outro específico para radiologia (RAD-DINO da Microsoft).
+Você está rodando um experimento em Google Colab com GPU T4. Vamos comparar dois modelos que extraem características de raios-X de tórax: uma EfficientNetB0 treinado em fotos genéricas (ImageNet) e outro específico para radiologia (RAD-DINO da Microsoft). Para cada prompt que eu lhe passar, faça o código apenas para a instrução contida naquele prompt e coloque na célula apropriada (# ✦ Código gerado pelo Gemini (Prompt Card 4)), sem tentar adivinhar os próximos comandos. O conteúdo de cada um dos prompts cards seguintes será lhe fornecido no momento apropriado, apenas um por vez.
 
-Nesta célula, faça o setup inicial:
+Prompt card 0 - Nesta célula, faça o setup inicial:
 - Instale e importe as bibliotecas que você achar necessária
 - Defina `SEED = 42` para reproducibilidade
 - Configure DEVICE para usar GPU se disponível
 - Crie funções auxiliares que você vai reutilizar depois
 - Deixe tudo pronto para carregar dados nos próximos passos
-
-Não precisa de instruções super detalhadas — crie o que você achar que faz sentido para esse workflow!
 
 ---
 
