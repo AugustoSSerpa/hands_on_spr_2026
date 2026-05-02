@@ -15,7 +15,7 @@ Prompt card 0 - Nesta célula, faça o setup inicial:
 
 ## Prompt Card 1 — Carregar e Visualizar o Dataset
 
-Prompt card 1 - Carregue o dataset PneumoniaMNIST em três splits com resolução 64×64. Pré-processe as imagens para que os valores fiquem entre 0 e 1 e converta para 3 canais (mesmo que grayscale). Faça download automático da medmnist se não estiver presente. Plote 5 imagens aleatórias de cada split mostrando a classe (0=Normal ou 1=Pneumonia).
+Prompt card 1 - Carregue 1000 imagens do dataset PneumoniaMNIST em três splits (800/100/100) com resolução 64×64. Pré-processe as imagens para que os valores fiquem entre 0 e 1 e converta para 3 canais (mesmo que grayscale). Faça download automático da medmnist se não estiver presente. Plote 5 imagens aleatórias de cada split mostrando a classe (0=Normal ou 1=Pneumonia).
 
 ---
 
