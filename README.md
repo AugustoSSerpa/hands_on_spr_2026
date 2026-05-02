@@ -38,8 +38,8 @@ Os participantes nunca editam código manualmente. Para cada bloco do notebook h
 hands_on_spr_2026/
 ├── hands_on_spr_2026.ipynb   # Notebook Colab (100% prompt-driven, sem código pré-preenchido)
 ├── prompts.md                # Todos os Prompt Cards (PC0–PC6) para o instrutor
-├── images.jpg                # Imagem de RX de tórax para demo de inferência
-├── m2400651-pneumonia.jpg    # Imagem de RX de tórax para demo de inferência
+├── exemplo_1.jpg                # Imagem de RX de tórax para demo de inferência
+├── exemplo_2.jpg    # Imagem de RX de tórax para demo de inferência
 ├── README.md                 # Este arquivo
 └── .gitignore
 ```
