@@ -21,21 +21,21 @@ Prompt card 1 - Carregue o dataset PneumoniaMNIST em três splits com resoluçã
 
 ## Prompt Card 2 - Extração de _embeddings_ + comparação
 
-Prompt card 2 - Extraia os _embeddings_ de todas as 1000 imagens dos três splits para cada um dos modelos (um deles um EfficientNetB0 pré-treinado no ImageNet e o outro o RAD-DINO da Microsoft). Armazene os embeddings em dicionários com chaves 'train', 'val' e 'test'.
+Prompt card 2 - Extraia os _embeddings_ de todas as 1000 imagens dos três splits para cada um dos modelos (um deles um EfficientNetB0 pré-treinado no ImageNet e o outro o RAD-DINO da Microsoft). Armazene os embeddings.
 
-Em seguida, usando as funções auxiliares definidas no PC0 (ou recrie-as se precisar) e em seguida plote o t-SNE dos embeddings do conjunto de teste lado a lado para EfficientNetB0 e RAD-DINO, colorindo os pontos pela classe. Coloque títulos indicando qual modelo é qual.
+Em seguida, usando as funções auxiliares definidas no PC0 (ou recrie-as se precisar) plote o t-SNE dos embeddings do conjunto de teste lado a lado para EfficientNetB0 e RAD-DINO, colorindo os pontos pela classe. Coloque títulos indicando qual modelo é qual.
 
 ---
 
 ## Prompt Card 3 — Classificador 1: EfficientNetB0 (ImageNet)
 
-**Prompt card 3 - Use os _embeddings_ do EfficientNetB0 pré-treinado no ImageNet e treine a cabeça classificadora, plote as curvas de treino e avalie no conjunto de teste. Calcule as métricas Accuracy, Precision, Recall e F1-score. Plote também a matriz de confusão.**
+**Prompt card 3 - Use os _embeddings_ do EfficientNetB0 pré-treinado no ImageNet e treine a cabeça classificadora, plote as curvas de treino e avalie no conjunto de teste. Calcule as métricas Acurácia, Sensibilidade, Especificidade, Valor Preditivo Positivo e Valor Preditivo Negativo. Plote também a matriz de confusão.**
 
 ---
 
 ## Prompt Card 4 — Classificador 2: RAD-DINO (Radiologia)
 
-Prompt card 4 - Use os _embeddings_ do RAD-DINO e treine a cabeça classificadora, plote as curvas de treino e avalie no conjunto de teste, usando os mesmos hiperparâmetros do EfficientNet para ter fair comparison. Calcule as mesmas métricas (Accuracy, Precision, Recall e F1-score) e plote a matriz de confusão.
+Prompt card 4 - Use os _embeddings_ do RAD-DINO e treine a cabeça classificadora, plote as curvas de treino e avalie no conjunto de teste, usando os mesmos hiperparâmetros e a mesma rede neural do EfficientNet para ter fair comparison. Calcule as mesmas métricas (Acurácia, Sensibilidade, Especificidade, Valor Preditivo Positivo e Valor Preditivo Negativo) e plote a matriz de confusão.
 
 ---
 
