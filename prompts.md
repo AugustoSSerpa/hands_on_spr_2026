@@ -78,6 +78,12 @@ Prompt card 5 (Comparação de Resultados) - Plotar um gráfico de barras compar
 
 ## Prompt Card 6
 
-Prompt card 6 (Inferência em Imagem Própria) - Permita que o usuário faça upload de uma imagem de raio-X de tórax do próprio computador. Rode a inferência com os dois modelos treinados, pré-processando a imagem do jeito certo, e exiba o resultado lado a lado com a predição de cada modelo.
+Prompt card 6 (Visualização de fronteiras de decisão) - Plote novamente os t-sne, agora demonstrando também o separador que cada modelo SVM usou para separar os casos em positivo e negativo.
+
+---
+
+## Prompt Card 7
+
+Prompt card 7 (Inferência em Imagem Própria) - Permita que o usuário faça upload de uma imagem de raio-X de tórax do próprio computador. Rode a inferência com os dois modelos treinados, pré-processando a imagem do jeito certo, e exiba o resultado lado a lado com a predição de cada modelo.
 
 **⚠️ Inferência puramente demonstrativa — sem validade clínica.**
