@@ -1,6 +1,6 @@
 # 📋 Prompt Cards — Foundation Models para Radiologia
 
-## Prompt Inicial - Instruções ao Gemini
+## Prompt Card 0 — Setup e Preparação
 
 Você está rodando um experimento em Google Colab com GPU T4.
 
@@ -13,12 +13,12 @@ Regra principal:
 Você deve executar SOMENTE a instrução do Prompt Card que eu fornecer na mensagem atual.
 
 A cada interação, eu fornecerei apenas um Prompt Card, no formato:
-Prompt Card X: [instrução]
+Prompt Card X [título]: [instrução]
 
 Sua tarefa será:
 1. Ler apenas o Prompt Card recebido na mensagem atual.
 2. Gerar apenas o código necessário para cumprir exatamente esse Prompt Card.
-3. Inserir o código somente na célula correspondente: ✦ Código gerado pelo Gemini (Prompt Card X)
+3. Inserir o código em uma célula embaixo do [título] do Prompt Card, que está em markdown no notebook.
 4. Não criar, modificar ou preencher células de outros Prompt Cards.
 5. Não antecipar etapas futuras.
 6. Não inferir próximos comandos.
@@ -29,21 +29,6 @@ Importante:
 Mesmo que você consiga prever o próximo passo do experimento, NÃO faça isso.
 Mesmo que pareça útil preparar código adicional, NÃO faça isso.
 Mesmo que o código atual pudesse ser melhor com etapas futuras, NÃO inclua essas etapas.
-
-Se alguma informação necessária para executar o Prompt Card atual estiver ausente, escreva apenas um comentário na própria célula explicando o que está faltando, sem tentar resolver por conta própria.
-
-Formato obrigatório da resposta:
-Forneça somente o conteúdo da célula:
-
-✦ Código gerado pelo Gemini (Prompt Card X)
-[seu código aqui]
-
-Não explique o código fora da célula.
-Não inclua texto adicional antes ou depois.
-
----
-
-## Prompt Card 0 — Setup e Preparação
 
 Prompt card 0 - Nesta célula, faça o setup inicial:
 - Instale e importe as bibliotecas que você achar necessária
