@@ -111,6 +111,49 @@ hands_on_spr_2026/
 
 ---
 
+---
+---
+# 💬 Discussão Clínica
+
+## O que aconteceu?
+
+Ambos os backbones ficaram **completamente congelados** durante o experimento. Apenas a cabeça classificadora foi treinada — e era idêntica para os dois:
+
+| | EfficientNetB0 | RAD-DINO |
+|---|---|---|
+| **Pré-treinamento** | ImageNet (1,28M fotos naturais) | 880K+ RX de tórax (MIMIC, CheXpert, NIH, PadChest, BRAX) |
+| **Arquitetura** | CNN (EfficientNet) | ViT-B/14 com DINOv2 |
+| **Dim. embedding** | 1.280 | 768 |
+| **Parâmetros treinados** | ~262K (só head) | ~262K (só head) |
+| **Tamanho do modelo** | ~21MB | ~87MB |
+
+## Perguntas para reflexão
+
+**1. Por que o t-SNE do RAD-DINO mostra clusters mais separados?**
+> Os embeddings do RAD-DINO já codificam padrões clínicos radiológicos (opacidades, consolidações, textura pulmonar anormal). O EfficientNetB0 ImageNet codifica bordas e texturas de imagens naturais — parcialmente útil, mas sem especificidade clínica.
+
+**2. Por que treinamos APENAS a cabeça (feature extraction)?**
+> Fine-tuning completo com 5.856 imagens em um backbone de 86M+ parâmetros causaria overfitting severo. Feature extraction é a abordagem padrão quando o dataset clínico é pequeno.
+
+**3. O RAD-DINO foi treinado em pneumonia especificamente?**
+> Não. Foi treinado de forma auto-supervisionada (DINOv2) em raios-X gerais — sem labels de diagnóstico. A separação que vemos vem do conhecimento geral de radiologia de tórax aprendido de forma não-supervisionada.
+
+**4. Isso é suficiente para uso clínico real?**
+> Não. Imagens 64×64 perdem detalhes diagnósticos críticos. O dataset tem viés geográfico (crianças de Guangzhou). Sem validação prospectiva nem aprovação regulatória. Este é um experimento educacional para demonstrar o princípio da **transferência de domínio**.
+
+**5. Qual é a implicação prática para radiologia?**
+> Ao escolher um modelo pré-treinado para fine-tuning em uma tarefa radiológica, modelos treinados em dados clínicos radiológicos tendem a superar modelos de propósito geral — mesmo quando apenas a cabeça é treinada.
+
+---
+
+## Referências
+
+- **PneumoniaMNIST:** Kermany DS et al., *Cell*, 2018. doi: 10.1016/j.cell.2018.02.010
+- **RAD-DINO:** Pérez-García F et al., *Nature Machine Intelligence*, 2025. doi: 10.1038/s42256-024-00965-w
+- **DINOv2:** Oquab M et al., *TMLR*, 2024. arXiv: 2304.07193
+- **MedMNIST v2:** Yang J et al., *Scientific Data*, 2023. doi: 10.1038/s41597-022-01721-8
+- **EfficientNet:** Tan M, Le QV, *ICML*, 2019. arXiv: 1905.11946
+
 ## ⚠️ Limitações
 
 | Limitação | Implicação |
