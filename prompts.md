@@ -47,7 +47,7 @@ Prompt card 1 (Carregar e Visualizar o Dataset) - Carregue 1000 imagens do datas
 
 ## Prompt Card 2
 
-Prompt card 2 (Extração de Embeddings + t-SNE) - Extraia os _embeddings_ de todas as 1000 imagens dos três splits para cada um dos modelos (um deles um EfficientNetB0 pré-treinado no ImageNet e o outro o RAD-DINO da Microsoft). Armazene os embeddings.
+Prompt card 2 (Extração de Embeddings + t-SNE) - Extraia os _embeddings_ de todas as 1000 imagens dos três splits para cada um dos modelos (um deles um EfficientNetB0 pré-treinado no ImageNet e o outro o RAD-DINO da Microsoft https://huggingface.co/microsoft/rad-dino). Armazene os embeddings.
 
 Em seguida, usando as funções auxiliares definidas no PC0 (ou recrie-as se precisar) plote o t-SNE dos embeddings do conjunto de teste lado a lado para EfficientNetB0 e RAD-DINO, colorindo os pontos pela classe. Coloque títulos indicando qual modelo é qual.
 
