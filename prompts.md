@@ -1,55 +1,7 @@
 # 📋 Prompt Cards — Foundation Models para Radiologia
 
-## Prompt Card 0
-
-Você está rodando um experimento em Google Colab com GPU T4.
-
-Objetivo geral do experimento:
-Comparar dois modelos para extração de características de raios-X de tórax:
-1. EfficientNetB0 pré-treinada em ImageNet.
-2. RAD-DINO da Microsoft, específico para radiologia.
-
-Regra principal:
-Você deve executar SOMENTE a instrução do Prompt Card que eu fornecer na mensagem atual.
-
-A cada interação, eu fornecerei apenas um Prompt Card, no formato:
-Prompt Card X (título): [instrução]
-
-Sua tarefa será:
-1. Ler apenas o Prompt Card recebido na mensagem atual.
-2. Gerar apenas o código necessário para cumprir exatamente esse Prompt Card.
-3. Inserir o código em uma célula embaixo do título do Prompt Card, que está em markdown no notebook.
-4. Não criar, modificar ou preencher células de outros Prompt Cards.
-5. Não antecipar etapas futuras.
-6. Não inferir próximos comandos.
-7. Não criar código preparatório para tarefas que ainda não foram solicitadas.
-8. Não adicionar validações, gráficos, treinos, comparações, análises ou salvamentos que não estejam explicitamente pedidos no Prompt Card atual.
-
-Importante:
-Mesmo que você consiga prever o próximo passo do experimento, NÃO faça isso.
-Mesmo que pareça útil preparar código adicional, NÃO faça isso.
-Mesmo que o código atual pudesse ser melhor com etapas futuras, NÃO inclua essas etapas.
-
-Prompt card 0 (Setup e Preparação) - Nesta célula, faça o setup inicial:
-- Instale e importe as bibliotecas que você achar necessária
-- Defina `SEED = 42` para reproducibilidade
-- Configure DEVICE para usar GPU se disponível
-- Crie funções auxiliares que você vai reutilizar depois
-- Deixe tudo pronto para carregar dados nos próximos passos
-
----
-
-## Prompt Card 1
-
-Prompt card 1 (Carregar e Visualizar o Dataset) - Carregue 1000 imagens do dataset PneumoniaMNIST em três splits (800/100/100) com resolução 64×64. Pré-processe as imagens para que os valores fiquem entre 0 e 1 e converta para 3 canais (mesmo que grayscale). Faça download automático da medmnist se não estiver presente. Plote 5 imagens aleatórias de cada split mostrando a classe (0=Normal ou 1=Pneumonia).
-
----
-
-## Prompt Card 2
-
-Prompt card 2 (Extração de Embeddings + t-SNE) - Extraia os _embeddings_ de todas as 1000 imagens dos três splits para cada um dos modelos (um deles um EfficientNetB0 pré-treinado no ImageNet e o outro o RAD-DINO da Microsoft). Armazene os embeddings.
-
-Em seguida, usando as funções auxiliares definidas no PC0 (ou recrie-as se precisar) plote o t-SNE dos embeddings do conjunto de teste lado a lado para EfficientNetB0 e RAD-DINO, colorindo os pontos pela classe. Coloque títulos indicando qual modelo é qual.
+> **PC0, PC1 e PC2 já estão pré-preenchidos no notebook** — os participantes apenas executam as células.
+> Este arquivo contém os **Prompt Cards PC3–PC6** para projetar durante o workshop.
 
 ---
 

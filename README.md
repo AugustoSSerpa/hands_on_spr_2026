@@ -36,8 +36,8 @@ Os participantes nunca editam código manualmente. Para cada bloco do notebook h
 
 ```
 hands_on_spr_2026/
-├── hands_on_spr_2026.ipynb   # Notebook Colab (100% prompt-driven, sem código pré-preenchido)
-├── prompts.md                # Todos os Prompt Cards (PC0–PC6) para o instrutor
+├── hands_on_spr_2026.ipynb   # Notebook Colab (PC0–PC2 pré-preenchidos; PC3–PC6 via Gemini)
+├── prompts.md                # Prompt Cards PC3–PC6 para projetar durante o workshop
 ├── exemplo_1.jpg                # Imagem de RX de tórax para demo de inferência
 ├── exemplo_2.jpg    # Imagem de RX de tórax para demo de inferência
 ├── README.md                 # Este arquivo
@@ -50,13 +50,13 @@ hands_on_spr_2026/
 
 | # | Bloco | Conteúdo |
 |---|---|---|
-| PC0 | Setup e Preparação | Instalar libs, SEED=42, funções auxiliares, configurar GPU |
-| PC1 | Carregar o Dataset | PneumoniaMNIST 1000 imagens, subsample 800/100/100, visualizar |
-| PC2 | Embeddings + t-SNE | Extrair features dos dois modelos, visualizar separação com t-SNE |
-| PC3 | Classificador 1 | Treinar cabeça sobre EfficientNetB0, métricas + matriz de confusão |
-| PC4 | Classificador 2 | Treinar cabeça sobre RAD-DINO (mesmos hiperparâmetros) |
-| PC5 | Comparação | Gráfico de barras + tabela de diferenças entre os dois modelos |
-| PC6 | Inferência Própria | Upload de RX do participante → predição dos dois modelos lado a lado |
+| PC0 | Setup e Preparação | **Pré-preenchido** — instala libs, define SEED=42, funções auxiliares |
+| PC1 | Carregar o Dataset | **Pré-preenchido** — PneumoniaMNIST 1000 imagens, subsample 800/100/100 |
+| PC2 | Embeddings + t-SNE | **Pré-preenchido** — extrai features dos dois modelos + visualização t-SNE |
+| PC3 | Classificador 1 | **Gemini** — treinar cabeça sobre EfficientNetB0, métricas + matriz |
+| PC4 | Classificador 2 | **Gemini** — treinar cabeça sobre RAD-DINO (mesmos hiperparâmetros) |
+| PC5 | Comparação | **Gemini** — gráfico de barras + tabela de diferenças |
+| PC6 | Inferência Própria | **Gemini** — upload de RX → predição dos dois modelos lado a lado |
 
 ---
 
@@ -71,11 +71,12 @@ hands_on_spr_2026/
 ### Fluxo do Participante
 
 1. Abra o notebook no Colab com GPU T4 (Runtime → Change runtime type → T4 GPU)
-2. Para cada bloco vazio:
-   - Leia o **Prompt Card** projetado pelo instrutor (ou em `prompts.md`)
+2. **PC0, PC1, PC2** — execute as células diretamente (código pré-preenchido)
+3. **PC3 a PC6** — para cada bloco:
+   - Leia o **Prompt Card** projetado pelo instrutor
    - Cole no **Gemini** (sidebar do Colab: ícone ✦ ou `Ctrl+Shift+I`)
-   - Cole o código gerado na célula e execute
-3. Ao chegar no PC6, use a imagem `m2400651-pneumonia.jpg` ou seu próprio RX
+   - Cole o código gerado na célula vazia e execute
+4. No PC6, use `exemplo_1.jpg` ou `exemplo_2.jpg` disponíveis no repositório, ou seu próprio RX
 
 ### Para Instrutores
 
