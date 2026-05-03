@@ -18,8 +18,7 @@ Prompt Card X: [instrução]
 Sua tarefa será:
 1. Ler apenas o Prompt Card recebido na mensagem atual.
 2. Gerar apenas o código necessário para cumprir exatamente esse Prompt Card.
-3. Inserir o código somente na célula correspondente:
-# ✦ Código gerado pelo Gemini (Prompt Card X)
+3. Inserir o código somente na célula correspondente: ✦ Código gerado pelo Gemini (Prompt Card X)
 4. Não criar, modificar ou preencher células de outros Prompt Cards.
 5. Não antecipar etapas futuras.
 6. Não inferir próximos comandos.
