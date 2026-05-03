@@ -35,7 +35,6 @@ Prompt card 0 (Setup e Preparação) - Nesta célula, faça o setup inicial:
 - Defina `SEED = 42` para reproducibilidade
 - Configure DEVICE para usar GPU se disponível
 - Crie funções auxiliares que você vai reutilizar depois
-- Deixe tudo pronto para carregar dados nos próximos passos
 
 ---
 
