@@ -60,13 +60,13 @@ Em seguida, plote o t-SNE dos embeddings do conjunto de **teste** lado a lado pa
 
 ## Prompt Card 3
 
-**Prompt card 3 (Classificador 1: EfficientNetB0 (ImageNet)) - Use os _embeddings_ do EfficientNetB0 pré-treinado no ImageNet e treine a cabeça classificadora, plote as curvas de treino e avalie no conjunto de teste. Calcule as métricas Acurácia, Sensibilidade, Especificidade, Valor Preditivo Positivo e Valor Preditivo Negativo. Plote também a matriz de confusão.**
+**Prompt card 3 (Classificador 1: EfficientNetB0 (ImageNet)) - Use os _embeddings_ do EfficientNetB0 pré-treinado no ImageNet e treine a cabeça classificadora usando um modelo Support Vector Machine (SVM), plote as curvas de treino e avalie no conjunto de teste. Calcule as métricas Acurácia, Sensibilidade, Especificidade, Valor Preditivo Positivo e Valor Preditivo Negativo. Plote também a matriz de confusão.**
 
 ---
 
 ## Prompt Card 4
 
-Prompt card 4 (Classificador 2: RAD-DINO (Radiologia)) - Use os _embeddings_ do RAD-DINO e treine a cabeça classificadora, plote as curvas de treino e avalie no conjunto de teste, usando os mesmos hiperparâmetros e a mesma rede neural do EfficientNet para ter fair comparison. Calcule as mesmas métricas (Acurácia, Sensibilidade, Especificidade, Valor Preditivo Positivo e Valor Preditivo Negativo) e plote a matriz de confusão.
+Prompt card 4 (Classificador 2: RAD-DINO (Radiologia)) - Use os _embeddings_ do RAD-DINO e treine a cabeça classificadora usando um modelo Support Vector Machine (SVM), plote as curvas de treino e avalie no conjunto de teste, usando os mesmos hiperparâmetros e a mesma rede neural do EfficientNet para ter fair comparison. Calcule as mesmas métricas (Acurácia, Sensibilidade, Especificidade, Valor Preditivo Positivo e Valor Preditivo Negativo) e plote a matriz de confusão.
 
 ---
 
