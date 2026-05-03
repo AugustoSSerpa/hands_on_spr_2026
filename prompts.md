@@ -40,13 +40,13 @@ Prompt card 0 (Setup e Preparação) - Nesta célula, faça o setup inicial:
 
 ## Prompt Card 1
 
-Prompt card 1 (Carregar e Visualizar o Dataset) - Carregue 1000 imagens do dataset PneumoniaMNIST em um grupo de treino (80%) e um de teste (20%) com resolução 64×64. Pré-processe as imagens para que os valores fiquem entre 0 e 1 e converta para 3 canais (mesmo que grayscale). Faça download automático da medmnist se não estiver presente. Plote 5 imagens aleatórias de cada split mostrando a classe (0=Normal ou 1=Pneumonia).
+Prompt card 1 (Carregar e Visualizar o Dataset) - Carregue 1000 imagens do dataset PneumoniaMNIST em três splits (800/100/100) com resolução 64×64. Pré-processe as imagens para que os valores fiquem entre 0 e 1 e converta para 3 canais (mesmo que grayscale). Faça download automático da medmnist se não estiver presente. Plote 5 imagens aleatórias de cada split mostrando a classe (0=Normal ou 1=Pneumonia).
 
 ---
 
 ## Prompt Card 2
 
-Prompt card 2 (Extração de Embeddings + t-SNE) - Extraia os _embeddings_ de todas as 1000 imagens dos dois splits para cada um dos modelos (EfficientNetB0 pré-treinado no ImageNet e RAD-DINO da Microsoft — `microsoft/rad-dino`). Armazene os embeddings.
+Prompt card 2 (Extração de Embeddings + t-SNE) - Extraia os _embeddings_ de todas as 1000 imagens dos três splits para cada um dos modelos (EfficientNetB0 pré-treinado no ImageNet e RAD-DINO da Microsoft — `microsoft/rad-dino`). Armazene os embeddings.
 
 Dicas arquiteturais:
 - O RAD-DINO é um **modelo de extração de features, não de classificação** — carregue-o com `AutoModel`. O embedding global é o **token CLS**: `outputs.last_hidden_state[:, 0, :]`.
@@ -60,13 +60,13 @@ Em seguida, plote o t-SNE dos embeddings do conjunto de **teste** lado a lado pa
 
 ## Prompt Card 3
 
-**Prompt card 3 (Classificador 1: EfficientNetB0 (ImageNet)) - Use os _embeddings_ do EfficientNetB0 pré-treinado no ImageNet e treine a cabeça classificadora usando um modelo Support Vector Machine (SVM), plote as curvas de treino e avalie no conjunto de teste. Calcule as métricas Acurácia, Sensibilidade, Especificidade, Valor Preditivo Positivo e Valor Preditivo Negativo. Plote também a matriz de confusão.**
+**Prompt card 3 (Classificador 1: EfficientNetB0 (ImageNet)) - Use os _embeddings_ do EfficientNetB0 pré-treinado no ImageNet e treine a cabeça classificadora, plote as curvas de treino e avalie no conjunto de teste. Calcule as métricas Acurácia, Sensibilidade, Especificidade, Valor Preditivo Positivo e Valor Preditivo Negativo. Plote também a matriz de confusão.**
 
 ---
 
 ## Prompt Card 4
 
-Prompt card 4 (Classificador 2: RAD-DINO (Radiologia)) - Use os _embeddings_ do RAD-DINO e treine a cabeça classificadora usando um modelo Support Vector Machine (SVM), plote as curvas de treino e avalie no conjunto de teste, usando os mesmos hiperparâmetros e a mesma rede neural do EfficientNet para ter fair comparison. Calcule as mesmas métricas (Acurácia, Sensibilidade, Especificidade, Valor Preditivo Positivo e Valor Preditivo Negativo) e plote a matriz de confusão.
+Prompt card 4 (Classificador 2: RAD-DINO (Radiologia)) - Use os _embeddings_ do RAD-DINO e treine a cabeça classificadora, plote as curvas de treino e avalie no conjunto de teste, usando os mesmos hiperparâmetros e a mesma rede neural do EfficientNet para ter fair comparison. Calcule as mesmas métricas (Acurácia, Sensibilidade, Especificidade, Valor Preditivo Positivo e Valor Preditivo Negativo) e plote a matriz de confusão.
 
 ---
 
@@ -78,12 +78,6 @@ Prompt card 5 (Comparação de Resultados) - Plotar um gráfico de barras compar
 
 ## Prompt Card 6
 
-Prompt card 6 (Visualização de fronteiras de decisão) - Plote novamente os t-sne, agora demonstrando também o separador que cada modelo SVM usou para separar os casos em positivo e negativo.
-
----
-
-## Prompt Card 7
-
-Prompt card 7 (Inferência em Imagem Própria) - Permita que o usuário faça upload de uma imagem de raio-X de tórax do próprio computador. Rode a inferência com os dois modelos treinados, pré-processando a imagem do jeito certo, e exiba o resultado lado a lado com a predição de cada modelo.
+Prompt card 6 (Inferência em Imagem Própria) - Permita que o usuário faça upload de uma imagem de raio-X de tórax do próprio computador. Rode a inferência com os dois modelos treinados, pré-processando a imagem do jeito certo, e exiba o resultado lado a lado com a predição de cada modelo.
 
 **⚠️ Inferência puramente demonstrativa — sem validade clínica.**
