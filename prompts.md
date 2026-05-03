@@ -52,6 +52,7 @@ Dicas arquiteturais:
 - O RAD-DINO é um **modelo de extração de features, não de classificação** — carregue-o com `AutoModel`. O embedding global é o **token CLS**: `outputs.last_hidden_state[:, 0, :]`.
 - Congele os parâmetros dos dois modelos.
 - ⚠️ Pré-processamento independente por modelo: Os dois modelos têm pipelines de normalização diferentes. O EfficientNetB0 usa normalização ImageNet, enquanto o RAD-DINO não.
+- Converter imagens para formato PIL para o RAD-DINO
 
 Em seguida, plote o t-SNE dos embeddings do conjunto de **teste** lado a lado para EfficientNetB0 e RAD-DINO, colorindo os pontos pela classe. Coloque títulos indicando qual modelo é qual.
 
