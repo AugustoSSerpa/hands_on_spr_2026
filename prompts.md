@@ -46,7 +46,7 @@ Prompt card 1 (Carregar e Visualizar o Dataset) - Carregue 1000 imagens do datas
 
 ## Prompt Card 2
 
-Prompt card 2 (Extração de Embeddings + t-SNE) - Extraia os _embeddings_ de todas as 1000 imagens dos três splits para cada um dos modelos (EfficientNetB0 pré-treinado no ImageNet e RAD-DINO da Microsoft — `microsoft/rad-dino`). Armazene os embeddings.
+Prompt card 2 (Extração de Embeddings + t-SNE) - Extraia os _embeddings_ de todas as 1000 imagens dos dois splits para cada um dos modelos (EfficientNetB0 pré-treinado no ImageNet e RAD-DINO da Microsoft — `microsoft/rad-dino`). Armazene os embeddings.
 
 Dicas arquiteturais:
 - O RAD-DINO é um **modelo de extração de features, não de classificação** — carregue-o com `AutoModel`. O embedding global é o **token CLS**: `outputs.last_hidden_state[:, 0, :]`.
