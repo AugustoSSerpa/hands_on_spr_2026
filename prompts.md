@@ -36,7 +36,7 @@ Se alguma informação necessária para executar o Prompt Card atual estiver aus
 Formato obrigatório da resposta:
 Forneça somente o conteúdo da célula:
 
-# ✦ Código gerado pelo Gemini (Prompt Card X)
+✦ Código gerado pelo Gemini (Prompt Card X)
 [seu código aqui]
 
 Não explique o código fora da célula.
