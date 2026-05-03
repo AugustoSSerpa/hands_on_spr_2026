@@ -46,9 +46,14 @@ Prompt card 1 (Carregar e Visualizar o Dataset) - Carregue 1000 imagens do datas
 
 ## Prompt Card 2
 
-Prompt card 2 (Extração de Embeddings + t-SNE) - Extraia os _embeddings_ de todas as 1000 imagens dos três splits para cada um dos modelos (um deles um EfficientNetB0 pré-treinado no ImageNet e o outro o RAD-DINO da Microsoft https://huggingface.co/microsoft/rad-dino). Armazene os embeddings. Carregue o modelo 'microsoft/rad-dino' usando a biblioteca transformers (AutoModel). 
+Prompt card 2 (Extração de Embeddings + t-SNE) - Extraia os _embeddings_ de todas as 1000 imagens dos três splits para cada um dos modelos (EfficientNetB0 pré-treinado no ImageNet e RAD-DINO da Microsoft — `microsoft/rad-dino`). Armazene os embeddings.
 
-Em seguida, usando as funções auxiliares definidas no PC0 (ou recrie-as se precisar) plote o t-SNE dos embeddings do conjunto de teste lado a lado para EfficientNetB0 e RAD-DINO, colorindo os pontos pela classe. Coloque títulos indicando qual modelo é qual.
+Dicas arquiteturais:
+- O RAD-DINO é um **modelo de extração de features, não de classificação** — carregue-o com `AutoModel` (não `AutoModelForImageClassification`). O embedding global é o **token CLS**: `outputs.last_hidden_state[:, 0, :]`.
+- Para o EfficientNetB0, use apenas o backbone + pooling (sem a cabeça de classificação).
+- Congele os parâmetros dos dois modelos.
+
+Em seguida, plote o t-SNE dos embeddings do conjunto de **teste** lado a lado para EfficientNetB0 e RAD-DINO, colorindo os pontos pela classe. Coloque títulos indicando qual modelo é qual.
 
 ---
 
